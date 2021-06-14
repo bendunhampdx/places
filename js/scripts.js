@@ -21,6 +21,14 @@ MyVacations.prototype.findPlace = function(id) {
   return false;
 };
 
+MyVacations.prototype.deletePlace = function(id)  {
+  if (this.places[id] === undefined) {
+    return false;
+  }
+  delete this.places[id];
+  return true;
+};
+
 // Business logic for Places
 function Place(location, landmarks, timeOfYear, notes) {
   this.location = location;
