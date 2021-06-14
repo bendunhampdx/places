@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="js/jquery-3.6.0.js"></script>
   <script src="js/scripts.js"></script>
-  <title>places</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Places</title>
 </head>
+
 <body>
-  
+  <div class="container">
+    <h1>Places I Have Been!</h1>
+    <div class="row">
+      <div class="col-md-6">
+        <hr>
+        <form id="new-place">
+          <div class="form-group">
+            <label for="new-location">Location:</label>
+            <input type="text" class="form-control" id="new-location">
+          </div>
+          <div class="form-group">
+            <label for="new-landmark">Landmark:</label>
+            <input type="text" class="form-control" id="new-landmark">
+          </div>
+          <div class="form-group">
+            <label for="new-time-of-year">Time of year:</label>
+            <input type="text" class="form-control" id="new-time-of-year">
+          </div>
+          <div class="form-group">
+            <label for="new-notes">Notes:</label>
+            <input type="text" class="form-control" id="new-notes">
+          </div>
+          <button type="submit" class="btn-primary">Add</button>
+        </form>
+        <hr>
+        <h2>Places:</h2>
+        <ul id="places">
+        </ul>
+      </div>
+      <div class="col-md-6">
+        <div id="show-place">
+          <p>Location: <span class="location"></span></p>
+          <p>Landmarks: <span class="landmarks"></span></p>
+          <p>Time of Year: <span class="time-of-year"></span></p>
+          <p>Notes: <span class="notes"></span></p>
+          <div id="buttons">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
